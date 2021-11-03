@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About the violin">
+    <title>About Violin - Violin</title>
+    <style>
+        body {
+            background-color: #685454;
+        }
+
+        div {
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            text-align: center;
+            font-family:
+                "Cerebri Sans", Helvetica, Arial, sans-serif;
+            color: #685454;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 10px 10px;
+
+        }
+
+        h1 {
+            color: #685454;
+            padding: 20px;
+            margin: 10px 50px;
+            border: 1px #685454 solid;
+            border-radius: 15px 15px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-weight: 100;
+            font-size: 15px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        hr {
+            box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 30%;
+            border: 1px #685454 solid;
+            border-radius: 10px 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+        }
+
+        p {
+            margin: 10px auto;
+            line-height: 20px;
+
+        }
+
+        button {
+
+            margin: 25px auto 10px auto;
+            color: #f2f2f2;
+            background-color: #ea8a8a;
+            border: 1px #685454 solid;
+            border-radius: 25px 25px;
+            padding: 20px;
+            transition: all 150ms ease-in-out;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            color: #ea8a8a;
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+
+        .fiddle {
+            font-style: italic;
+            text-decoration: none;
+            color:#685454;
+        }
+
+        .fiddle:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .wikipedia {
+            font-size: 13px;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 25px;
+            text-decoration: none;
+            color: #a35e5e;
+        }
+
+        .wikipedia:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .footer {
+            font-size: smaller;
+            margin: 10px auto;
+
+        }
+
+        .mehrnazLink {
+            color: #a35e5e;
+            text-decoration: none;
+
+        }
+
+        .mehrnazLink:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <h1>
+            VIOLIN 
+        </h1>
+        <h2>
+            <em>Music encyclopedia</em>
+        </h2>
+        <hr />
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/015/339/original/girl_playing_violin.png?1629122910"
+            alt="girl playing violin">
+        <hr />
+        <p>
+            The violin, sometimes known as a
+            <a href="https://en.wikipedia.org/wiki/Fiddle" class="fiddle" title="Learn more about Fiddle" target="_blank">
+            Fiddle</a>,
+            is a wooden chordophone
+            (string instrument) in the violin family.
+            Most violins have a hollow wooden body.
+            It is the smallest and thus highest-pitched
+            instrument (soprano) in the family in
+            regular use. [a] The violin typically has four
+            strings, usually tuned in perfect fifths with
+            notes G3, D4, A4, E5, and is most commonly
+            played by drawing a bow across its strings.
+            It can also be played by plucking the strings
+            with the fingers
+            (pizzicato) and, in specialized cases,
+            by striking the strings with the wooden
+            side of the bow (col legno).
+            </br>
+
+            <a href="https://en.wikipedia.org/wiki/Violin" target="_blank" class="wikipedia" title="Read more">
+                Read more on Wikipedia
+            </a>
+
+        </p>
+        <button title="Subscribe">
+            Subscribe to our newsletter
+        </button>
+        <p class="footer">
+            Coded by
+            <a href="https://www.linkedin.com/in/mehrnaz-zand" target="_blank"
+                class="mehrnazLink" title="LinkedIn profile">Mehrnaz Zand</a>
+            with HTML, CSS and JavaScript
+        </p>
+
+    </div>
+    <script>
+
+        function suscribe() {
+            let name = prompt("What is your name?");
+            let greet = alert(`Hello ${name}!`)
+            let age = prompt("How old are you");
+
+            if (age >= 18) {
+                let email = prompt("What is your email?");
+                updateButton(`Welcome ${name}! You are now suscribed!`);
+
+            } else {
+                updateButton(`Sorry ${name}! You are too young to suscribe!☹`);
+            }
+        }
+        function updateButton(newButton) {
+            let button = document.querySelector("button");
+            button.innerHTML = newButton;
+
+        }
+
+
+        let suscribeButton = document.querySelector("button");
+        suscribeButton.addEventListener("click", suscribe);
+
+    </script>
+</body>
+
+</html>
